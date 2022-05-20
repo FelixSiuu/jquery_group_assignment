@@ -1,0 +1,161 @@
+/* detail page */
+.detail{
+  width: 1000px;
+}
+.pattern_detail{
+  height: 400px;
+  overflow: hidden;
+  border-radius:0 0 45px 45px;
+}
+.pattern_detail img{
+  width: 100%;
+  height: 100%;
+}
+/* expand_box */
+.expand_box{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+  transition: all 500ms ease;
+}
+.mask{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.9);
+}
+.orginal_image{
+  position: absolute;
+  max-width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* head */
+.detail_head{
+  height: 290px;
+  position: relative;
+  border-radius: 20px 20px 0 0;
+  background-color: white;
+}
+.level{
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  width: 90%;
+  height: 250px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  background-color: #ebf8e1;
+  border-radius: 10px;
+  box-shadow: 0 15px 15px rgba(0,0,0,.2);
+}
+.left, .right{
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+.right{
+  display: flex;
+  flex-direction: column;
+}
+.right>strong{
+  font-size: 1.2rem;
+}
+.left img{
+  width: 300px;
+  height: 200px;
+}
+/* body */
+.detail_body{
+  padding: 40px;
+  border-radius: 0 0 20px 20px;
+  background-color: white;
+}
+.desc_detail{
+  padding-bottom: 40px;
+}
+.imageBox{
+  display: flex;
+  margin-bottom: 50px;
+  padding-top: 60px;
+  border-top: 10px solid whitesmoke;
+}
+.imageBox .thumb{
+  width: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.imageBox .thumb img{
+  width: 100%;
+}
+.desc_img{
+  flex: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  text-align: center;
+}
+.desc_point{
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin: 5px 0;
+}
+.imageBox:nth-of-type(3){
+  flex-direction: column;
+  align-items: center;
+}
+.imageBox:nth-of-type(3) .thumb{
+  width: 80%;
+}
+/* guide & notice */
+.guide{
+  padding-top: 40px;
+  border-top: 10px solid whitesmoke;
+}
+.notice,
+.guide{
+  display: flex;
+  margin-bottom: 40px;
+}
+.icon_detail_info{
+  flex: 1;
+}
+.icon_detail_info img,
+.icon_detail_info img{
+  width: 100%;
+}
+.icon_content{
+  flex: 1;
+  margin-left: 5px;
+  color: #800001;
+  font-weight: bold;
+}
+.detail_body>.button{
+  display: block;
+  margin: 40px 0;
+  height: 80px;
+  line-height: 80px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 300ms ease;
+}
+.detail_body>.button:hover{
+  background-color: #ebf8e1;
+  color: gray;
+  font-size: 1.25rem;
+}

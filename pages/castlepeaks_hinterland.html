@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- from google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">  
+  <!-- public stylesheet -->
+  <link rel="stylesheet" href="../styles/public.css">
+  <!-- detail stylesheet -->
+  <link rel="stylesheet" href="../styles/detail.css">
+  <!-- favicon 網站圖標 -->
+  <link rel="shortcut icon" href="../images/favicon.ico" />  
+  <title>青山腹地</title>
+</head>
+<body>
+  <!-- header -->
+  <header class="header"></header>
+  <!-- nav -->
+  <nav class="nav"></nav>
+
+  <!-- container -->
+  <div class="app">
+    <div class="detail">
+      <!-- pattern route -->
+      <div class="pattern_detail">
+        <img src="../images/nt/nt_castlepeaks_hinterland.jpg" alt="">
+      </div>
+
+      <div class="detail_container">
+
+        <div class="expand_box">
+          <div class="mask"></div>
+          <img class="orginal_image" src="" alt="orginal">
+        </div>
+
+        <!-- detail head -->
+        <div class="detail_head">
+          <!-- route level -->
+          <div class="level">
+            <div class="left">
+              <img src="../images/level_detail.jpeg" alt="難度等級圖">
+            </div>
+            <div class="right">
+              路線難度<strong>高級</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- detail body -->
+        <div class="detail_body">
+          <div class="desc_detail">
+            青山腹地是香港西北端一片劃作操炮區的貧瘠劣地，長年來經過炮火洗練及風化沖刷，形成各種旱有的裂谷與沖溝。
+          </div>
+          <!-- images -->
+          <div class="images_detail">
+            <!-- img box 1 -->
+            <div class="imageBox">
+              <div class="thumb">
+                <img src="../images/nt/castlepeaks_hinterland/img1.png" alt="青山日落" title="點擊查看原圖">
+              </div>
+              <div class="desc_img"> 
+                <p class="desc_point">青山日落</p>
+              </div>
+            </div>
+            <!-- img box 2 -->
+            <div class="imageBox">
+              <div class="desc_img">
+                青山腹地的<p class="desc_point">青山發射站</p>
+              </div>
+              <div class="thumb">
+                <img src="../images/nt/castlepeaks_hinterland/img2.png" alt="青山發射站" title="點擊查看原圖">
+              </div>
+            </div>
+            <!-- img box 3 -->
+            <div class="imageBox">
+              <div class="thumb">
+                <img src="../images/nt/castlepeaks_hinterland/img3.png" alt="屯門美景" title="點擊查看原圖">
+              </div>
+              <div class="desc_img"> 
+                <p class="desc_point">屯門美景</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- guide -->
+          <div class="guide">
+            <div class="icon_detail_info">
+              <img src="../images/guide_icon.png" alt="">
+            </div>
+            <div class="icon_content">
+              巴士 58M/58X 	各區 - 良景邨 (良景邨下車)
+              <br />
+              小巴 48S	    旺角 - 良景邨 (良景邨下車)
+            </div>
+          </div>
+          <!-- notice -->
+          <div class="notice">
+            <div class="icon_detail_info">
+              <img src="../images/notice_icon.png" alt="">
+            </div>
+            <div class="icon_content">
+              部分路段位於屬軍事禁區之內，切勿於練習射擊的日子進入該區。新聞處每月均發出新聞稿，公佈下一個月份進行射擊練習的日期及時間。在政府的新聞資料庫中，亦可以「射擊練習」搜索有關資料或留意當天的電台廣播。此外，亦須留意該區有否因射擊練習而插上紅旗(日間)或掛置紅燈(夜間)<br />
+              <br />
+              青山腹地深受人為與自然力量的相互作用，造就獨特而險隘、荒涼中顯生機的絕崖溝壑。路線潛伏各種危險，遊者必須準備充足及小心行走
+            </div>
+          </div>
+
+          <!-- open map button -->
+          <a href="https://www.openstreetmap.org/#map=11/22.3567/114.1363" target="_blank" class="button"> 打開地圖 </a>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- footer -->
+  <footer class="footer"></footer>
+  
+  <!-- import jquery -->
+  <script src="../lib/jquery-3.6.0.min.js"></script> 
+  <script src="../scripts/header.js"></script>
+  <script src="../scripts/nav.js"></script>
+  <script src="../scripts/detail.js"></script>
+  <script src="../scripts/footer.js"></script>
+  <!-- 調用 getExpand function from detail.js 完成點擊查看原圖功能，需傳入兩個string類別argument，分別是area（hk,klns,nt,islands,）以及routeName -->
+  <script>
+    getExpand('nt','castlepeaks_hinterland')
+  </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- from google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <!-- public stylesheet -->
+  <link rel="stylesheet" href="../styles/public.css">
+  <!-- login page stylesheet -->
+  <link rel="stylesheet" href="../styles/login.css">
+  <!-- favicon 網站圖標 -->
+  <link rel="shortcut icon" href="../images/favicon.ico" />  
+  <title>登入</title>
+</head>
+<body>
+  <!-- header -->
+  <header class="header"></header>
+
+  <!-- nav -->
+  <nav class="nav"></nav>
+
+  <!-- container -->
+  <div class="app">
+    <div class="login_container">
+      <div class="form" >
+        <div class="username">
+          <label for="username">用戶名</label>
+          <input type="text" class="input" id="username" placeholder="請輸入你的用戶名" autofocus>
+        </div>
+        <div class="password">
+          <label for="password">密碼</label>
+          <input type="password" class="input" id="password"
+          placeholder="請輸入你的密碼">
+          <div class="showPwd">顯示</div>
+        </div>
+        <div class="submit">
+          <button class="button" onclick="verify()">登入</button>
+        </div>
+      </div>
+      <div class="tips">
+        <div class="textTips showTips">
+          <img src="../images/tips/tips_text.png" alt="">
+        </div>
+        <div class="pwdTips">
+          <img src="../images/tips/tips_pwd.jpeg" alt="">
+        </div>
+        <div class="successTips"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- footer -->
+  <footer class="footer"></footer>
+
+  <!-- import jquery -->
+  <script src="../lib/jquery-3.6.0.min.js"></script>
+  <script src="../scripts/header.js"></script>
+  <script src="../scripts/nav.js"></script>
+  <script src="../scripts/footer.js"></script>
+  <script>
+    var flag = true
+    
+    // 點擊登入按鈕，判斷是否正確輸入
+    function verify(){
+        // 輸入成功，settoken代表登入成功，使用window.history method返回前一頁
+      if(password.value.toString() === '123456'){
+        localStorage.setItem('name', $('#username')[0].value)
+        // 透過控制class來實現css動畫
+        $('.form').attr('class','form form_success')
+        // 更新name的值
+        var name = localStorage.getItem('name')
+        $('.successTips').html(`登入成功<br>歡迎回來<br>${name}<br>今日想去邊度`)
+        $('.textTips').attr('class','textTips')
+        $('.pwdTips').attr('class','pwdTips')
+        $('.successTips').attr('class','successTips showSuccessTips')
+        // 兩秒後返回前一頁
+        setTimeout(function timer(){
+          history.back()
+        }, 2000)
+      // 若密碼不爲123456 
+      }else{
+        alert('您輸入的賬戶名或密碼有誤')
+        // 同時清空輸入
+        $('#username')[0].value = ''
+        $('#password')[0].value = ''
+      }  
+    }
+
+    // text 與 password focus事件，切換圖片
+    $('#username').on('focus',function(){
+      $('.textTips').attr('class','textTips showTips')
+      $('.pwdTips').attr('class','pwdTips')
+    })
+    $('#password').on('focus',function(){
+      $('.textTips').attr('class','textTips')
+      $('.pwdTips').attr('class','pwdTips showTips')
+    })
+
+    // 點擊 顯示密碼, 轉換input type
+    $('.showPwd').on('click',function(){
+      if(flag){
+        $('#password').attr('type','text')
+        $(this).html('隱藏')
+        flag = false
+      }else{
+        $('#password').attr('type','password')
+        $(this).html('顯示')
+        flag = true
+      }
+    })
+  </script>
+</body>
+</html>

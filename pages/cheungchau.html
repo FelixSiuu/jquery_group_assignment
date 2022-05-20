@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- from google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">  
+  <!-- public stylesheet -->
+  <link rel="stylesheet" href="../styles/public.css">
+  <!-- detail stylesheet -->
+  <link rel="stylesheet" href="../styles/detail.css">
+  <!-- favicon 網站圖標 -->
+  <link rel="shortcut icon" href="../images/favicon.ico" />  
+  <title>長洲關公忠義亭</title>
+</head>
+<body>
+  <!-- header -->
+  <header class="header"></header>
+  <!-- nav -->
+  <nav class="nav"></nav>
+
+  <!-- container -->
+  <div class="app">
+    <div class="detail">
+      <!-- pattern route -->
+      <div class="pattern_detail">
+        <img src="../images/islands/islands_cheungchau.png" alt="">
+      </div>
+
+      <div class="detail_container">
+
+        <div class="expand_box">
+          <div class="mask"></div>
+          <img class="orginal_image" src="" alt="orginal">
+        </div>
+
+        <!-- detail head -->
+        <div class="detail_head">
+          <!-- route level -->
+          <div class="level">
+            <div class="left">
+              <img src="../images/level_detail.jpeg" alt="難度等級圖">
+            </div>
+            <div class="right">
+              路線難度<strong>初級</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- detail body -->
+        <div class="detail_body">
+          <div class="desc_detail">
+            長洲關公忠義亭是一所關帝廟，位於長洲南部的山上。亭兩旁種植了數棵台灣山櫻花樹，每年大約三月上旬櫻花樹便會開花，而且吸引不少來賞花的人潮。
+          </div>
+          <!-- images -->
+          <div class="images_detail">
+            <!-- img box 1 -->
+            <div class="imageBox">
+              <div class="thumb">
+                <img src="../images/islands/cheungchau/img1.png" alt="台灣山櫻" title="點擊查看原圖">
+              </div>
+              <div class="desc_img"> 
+                <p class="desc_point">台灣山櫻</p>又稱為緋寒櫻
+              </div>
+            </div>
+            <!-- img box 2 -->
+            <div class="imageBox">
+              <div class="desc_img">
+                忠義亭內的<p class="desc_point">關帝廟</p>
+              </div>
+              <div class="thumb">
+                <img src="../images/islands/cheungchau/img2.png" alt="關帝廟" title="點擊查看原圖">
+              </div>
+            </div>
+            <!-- img box 3 -->
+            <div class="imageBox">
+              <div class="thumb">
+                <img src="../images/islands/cheungchau/img3.png" alt="關公忠義亭" title="點擊查看原圖">
+              </div>
+              <div class="desc_img"> 
+                <p class="desc_point">關公忠義亭</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- guide -->
+          <div class="guide">
+            <div class="icon_detail_info">
+              <img src="../images/guide_icon.png" alt="">
+            </div>
+            <div class="icon_content">
+              於中環5號碼頭乘坐渡輪前往長洲 (詳細船期可瀏覽 <a href="https://www.td.gov.hk/tc/transport_in_hong_kong/public_transport/ferries/service_details/#o01">運輸署網站</a> )，上岸後往東灣路走，然後右轉至警署徑，向山坡方向步行約10分鐘便到達關公忠義亭。
+            </div>
+          </div>
+          <!-- notice -->
+          <div class="notice">
+            <div class="icon_detail_info">
+              <img src="../images/notice_icon.png" alt="">
+            </div>
+            <div class="icon_content">
+              櫻花的花期很短，而且每年開花的時間都不同，最佳觀賞季節為每年三月上旬至中旬。 <br />
+              <br />
+              近年賞花人數持續增加，請大家謹守秩序，切勿破壞櫻花樹的生長。廟內亦應保持清靜，切勿打擾他人。
+            </div>
+          </div>
+
+          <!-- open map button -->
+          <a href="https://www.openstreetmap.org/#map=11/22.3567/114.1363" target="_blank" class="button"> 打開地圖 </a>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- footer -->
+  <footer class="footer"></footer>
+  
+  <!-- import jquery -->
+  <script src="../lib/jquery-3.6.0.min.js"></script>
+  <script src="../scripts/header.js"></script>
+  <script src="../scripts/nav.js"></script>
+  <script src="../scripts/detail.js"></script>
+  <script src="../scripts/footer.js"></script>
+  <!-- 調用 getExpand function from detail.js 完成點擊查看原圖功能，需傳入兩個string類別argument，分別是area（hk,klns,nt,islands,）以及routeName -->
+  <script>
+    getExpand('islands','cheungchau')
+  </script>
+</body>
+</html>

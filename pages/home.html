@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- from google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <!-- swiper -->
+  <link rel="stylesheet" href="../api/swiper-bundle.min@8.15.css">
+  <!-- public stylesheet -->
+  <link rel="stylesheet" href="../styles/public.css">
+  <!-- home page stylesheet -->
+  <link rel="stylesheet" href="../styles/home.css">
+  <!-- favicon 網站圖標 -->
+  <link rel="shortcut icon" href="../images/favicon.ico" />
+  <title>主頁</title>
+</head>
+<body>                                         
+  
+  <!-- header -->
+  <header class="header"></header>
+
+  <!-- nav -->
+  <nav class="nav"></nav>
+
+
+  <!-- container -->
+  <div class="app">
+    <div class="home_container">
+      <!-- patterns -->
+      <div class="patterns"></div>
+
+      <!-- Swiper  -->
+      <div class="swiper-container">
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2" >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../images/swiper/swiper_hk.jpg" />
+              <div class="swiperItem_desc">
+                <div class="title" data-swiper-parallax="-300">大潭水塘</div>
+                <div class="subtitle" data-swiper-parallax="-200">香港</div>
+                <div class="text" data-swiper-parallax="-100">
+                  <p>
+                    大潭水塘是香港南區一組水塘，位於港島東南部的大潭郊野公園之內，毗連畢拿山、渣甸山、紫羅蘭山及柏架山。
+                  </p>
+                </div>  
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="../images/swiper/swiper_kln.jpg" />
+              <div class="swiperItem_desc">
+                <div class="title" data-swiper-parallax="-300">獅子山</div>
+                <div class="subtitle" data-swiper-parallax="-200">九龍</div>
+                <div class="text" data-swiper-parallax="-100">
+                  <p>
+                    獅子山位於九龍與新界之間，高海拔495米，因其形狀如一頭伏卧的雄壯獅子而命名。
+                  </p>
+                </div>  
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="../images/swiper/swiper_nt.jpeg" />
+              <div class="swiperItem_desc">
+                <div class="title" data-swiper-parallax="-300">青山腹地（月牙谷）</div>
+                <div class="subtitle" data-swiper-parallax="-200">新界</div>
+                <div class="text" data-swiper-parallax="-100">
+                  <p>
+                    青山腹地是香港西北端一片劃作操炮區的貧瘠劣地
+                  </p>
+                </div>  
+              </div>
+            </div>
+            
+            <div class="swiper-slide">
+              <img src="../images/swiper/swiper_island.jpeg" />
+              <div class="swiperItem_desc">
+                <div class="title" data-swiper-parallax="-300">長洲關公忠義亭
+                </div>
+                <div class="subtitle" data-swiper-parallax="-200">離島</div>
+                <div class="text" data-swiper-parallax="-100">
+                  <p>
+                    長洲關公忠義亭是一所關帝廟，位於長洲南部的山上。
+                  </p>
+                </div>  
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div thumbsSlider="" class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="../images/swiper/swiper_hk.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="../images/swiper/swiper_kln.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="../images/swiper/swiper_nt.jpeg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="../images/swiper/swiper_island.jpeg" />
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>  
+
+      <!-- promo_video -->
+      <div class="promo_video">
+        <div class="video_container">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/d3MoEzlAvj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- slogan -->
+      <div class="slogan">
+        Let's go hiking for pleasure
+      </div>
+
+      <!-- area -->
+      <div class="area"></div>
+
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer"></footer>
+  
+  <!-- import jquery -->
+  <script src="../lib/jquery-3.6.0.min.js"></script>
+  <script src="../scripts/header.js"></script>
+  <script src="../scripts/nav.js"></script>
+  <script src="../scripts/area.js"></script>
+  <script src="../scripts/footer.js"></script>
+  <script src="../api/swiper-bundle.min@8.15.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    // swiper
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+        spaceBetween: 10,
+        autoplay: {
+          delay: 5000,
+        },
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
+
+  </script>
+</body>
+</html>

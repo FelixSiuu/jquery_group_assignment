@@ -1,0 +1,20 @@
+h1.big {
+	font-size:48px;
+	color:gold;
+	text-shadow:2px 2px 4px tomato, 0 0 10px yellow;
+	text-align:center;
+	margin-bottom:20px;
+}
+
+.colortxt {
+	border-bottom:3px dotted black;
+	color:orange;
+	}
+
+
+.tableline {
+	margin: 0 0 0 10px;
+	padding: 0 0 10px 0;
+	border-bottom:10px groove tan;
+	}
+

@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.animate_box{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: #DFDFDD;
+
+}
+.runningBear{
+  position: absolute;
+  width: 100%;
+  height: 430px;
+  bottom: 0;
+  background-color: #DFDFDD;
+}
+.goHome{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  width: 200px;
+  height: 50px;
+  background-color: antiquewhite;
+} 
+.goHome .button{
+  font-size: 2rem;
+}
+.bg1{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 430px;
+  background: url('../images/entry/bg1.png') no-repeat;
+  animation: backrun 35s linear infinite;
+}
+.bg2{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 330px;
+  background: url('../images/entry/bg2.png') no-repeat;
+  animation: backrun 25s linear infinite;
+}
+.bear{
+  position: absolute;
+  bottom: 100px;
+  width: 200px;
+  height: 100px;
+  background: url('../images/entry/bear.png') no-repeat;
+  animation: run 1s steps(8) infinite, runpos 3s linear forwards;    
+}
+
+@keyframes run {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    /* 熊跑完psd圖的距離*/
+    background-position: -1600px 0;
+  }
+}
+
+@keyframes runpos {
+  0% {
+    left: 0;
+  }
+  100% {   
+    /* 跑到頁面正中間 */
+    left: 50%;
+    transform: translatex(-50%);
+  }
+}
+@keyframes backrun {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
