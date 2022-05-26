@@ -1,5 +1,6 @@
 # jquery_group_assignment
 最終效果查看：https://felixsiuu.github.io/web_jquery_group_assignment/
+
 group assignment using jquery
 
 ##### 1.公共組件header, footer, nav使用javascript創建
