@@ -1,5 +1,5 @@
 # jquery_group_assignment
-最終效果查看：https://felixsiuu.github.io/web_jquery_group_assignment/
+production demo link：https://felixsiuu.github.io/web_jquery_group_assignment/
 
 group assignment using jquery
 
